@@ -1,0 +1,35 @@
+.countdown__container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 768px;
+    margin: 1rem auto;
+    justify-content: space-evenly;
+}
+
+.countdown__digit-group {
+    display: flex;
+    justify-content: center;
+}
+
+.countdown__digit-group > :not(:last-child) {
+    margin-right: 2px;
+}
+
+.countdown__digit {
+    display: block;
+    padding: 4px 4px;
+    font-size: 80%;
+}
+
+.countdown__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+}
+
+.countdown__unit {
+    text-align: center;
+    font-size: 50%;
+}

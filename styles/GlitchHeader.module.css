@@ -1,0 +1,22 @@
+.word {
+    line-height: 56px;
+    height: 56px;
+}
+
+.word:nth-child(1), .word:nth-child(3) {
+  text-align: right;
+}
+
+.letter {
+    display: inline-block;
+    width: calc(1em * 0.6);
+    overflow: hidden;
+    text-align: center;
+}
+
+.title {
+    margin-top: 15%;
+    text-align: center;
+    font-size: 100%;
+    padding-right: 15%;
+}
