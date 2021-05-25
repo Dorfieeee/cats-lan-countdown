@@ -58,3 +58,20 @@
     height: auto;
     max-width: 100%;
 }
+
+.logo {
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    z-index: 1;
+    opacity: 0.75;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+.off-screen {
+    position: absolute;
+    left: -200%;
+}

@@ -32,8 +32,20 @@
     color: inherit;
     font-size: 50%;
     position: absolute;
-    left: 1.5rem;
-    top: 1.5rem;
+    right: 1.5rem;
+    top: 2.5rem;
     opacity: 0.75;
     cursor: pointer;
+    z-index: 1;
+}
+
+.audio-toggle-btn:hover {
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .audio-toggle-btn {
+        top: 6.5rem;
+        left: 1.5rem;
+    }
 }

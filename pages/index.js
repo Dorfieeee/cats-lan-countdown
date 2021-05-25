@@ -16,13 +16,34 @@ export default function Home() {
                     content="Webpage about CATS clan's LAN-party in Praslavice in June, 2021."
                 />
                 <link rel="icon" href="/favicon.ico" />
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"></link>
+                <link
+                    rel="stylesheet"
+                    href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+                    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+                    crossorigin="anonymous"
+                ></link>
             </Head>
 
             <section className={styles["top-section"]}>
-
+                <h2 className={styles["off-screen"]}>Countdown</h2>
                 <header className={styles["top-header"]}>
-                    <GlitchHeader className={styles.title} muted={muted} setMuted={setMuted}>
+                    <a
+                        className={styles.logo}
+                        href="https://csb-9mk2e.netlify.app/"
+                        target="_blank"
+                    >
+                        <img
+                            src="https://i.ibb.co/7pw2wXF/CATS-weblogo.png"
+                            width="50"
+                            height="58"
+                            alt="Clan logo of CATS"
+                        ></img>
+                    </a>
+                    <GlitchHeader
+                        className={styles.title}
+                        muted={muted}
+                        setMuted={setMuted}
+                    >
                         LAN Praslavice 6/2021
                     </GlitchHeader>
                 </header>
