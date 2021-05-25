@@ -31,8 +31,8 @@ export default function Home() {
                     <video
                         className={styles["members-video"]}
                         src="/img/cats-lanka-short.webm"
-                        width="100%"
-                        height="auto"
+                        width="756"
+                        height="371"
                         autoPlay={true}
                         loop={true}
                         muted={true}

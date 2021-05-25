@@ -152,7 +152,7 @@ export function GlitchHeader({ children, muted, setMuted }) {
                     <i className="fas fa-volume-up" title="Mute"></i>
                 )}
             </button>
-            <h1 className={styles.title}>
+            <div className={styles.title} role="heading" aria-level="1">
                 {children
                     .toUpperCase()
                     .split(" ")
@@ -161,7 +161,7 @@ export function GlitchHeader({ children, muted, setMuted }) {
                             {word}
                         </Word>
                     ))}
-            </h1>
+            </div>
         </>
     );
 }

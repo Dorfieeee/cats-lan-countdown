@@ -50,12 +50,11 @@
 }
 
 .members-video-wrapper {
-    min-width: 300px;
-    max-width: 768px;
-    height: auto;
     flex-shrink: 1;
 }
 
 .members-video {
     border-radius: 5px;
+    height: auto;
+    max-width: 100%;
 }
