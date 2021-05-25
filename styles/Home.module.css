@@ -24,27 +24,36 @@
     margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 567px) and (min-height: 667px) {
+    .top-section {
+        font-size: 54px;
+    }
+}
+
+@media screen and (min-width: 768px) and (min-height: 768px) {
   .top-section {
-      font-size: 52px;
+      font-size: 62px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) and (min-height: 868px) {
     .top-section {
-        font-size: 64px;
+        font-size: 70px;
     }
 }
 
 .top-header {
   width: 100%;
+  flex-grow: 1;
+  display: grid;
+  position: relative;
 }
 
 .members-video-wrapper {
     min-width: 300px;
     max-width: 768px;
     height: auto;
-    aspect-ratio: 736 / 361;
+    flex-shrink: 1;
 }
 
 .members-video {

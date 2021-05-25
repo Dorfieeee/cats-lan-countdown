@@ -1,10 +1,16 @@
 .word {
     line-height: 56px;
     height: 56px;
+    width: max-content;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
-.word:nth-child(1), .word:nth-child(3) {
-  text-align: right;
+.word:nth-child(1),
+.word:nth-child(3) {
+    width: max-content;
+    margin-left: 80%;
+    transform: translateX(-50%);
 }
 
 .letter {
@@ -15,8 +21,22 @@
 }
 
 .title {
-    margin-top: 15%;
+    margin: 0.25rem 0;
     text-align: center;
     font-size: 100%;
     padding-right: 15%;
+    position: relative;
+    align-self: center;
+}
+
+.audio-toggle-btn {
+    border: none;
+    background: none;
+    color: inherit;
+    font-size: 50%;
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+    opacity: 0.75;
+    cursor: pointer;
 }
