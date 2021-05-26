@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import { GlitchHeader } from "../components/GlitchHeader";
 import { Countdown } from "../components/Countdown";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
     const [muted, setMuted] = useState(true);
@@ -20,8 +21,14 @@ export default function Home() {
                     rel="stylesheet"
                     href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
                     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
-                    crossorigin="anonymous"
-                ></link>
+                    crossOrigin="anonymous"
+                />
+                <link
+                    rel="preload"
+                    href="/fonts/Hacked/Hacked-KerX.ttf"
+                    as="font"
+                    crossOrigin=""
+                />
             </Head>
 
             <section className={styles["top-section"]}>
@@ -32,12 +39,12 @@ export default function Home() {
                         href="https://csb-9mk2e.netlify.app/"
                         target="_blank"
                     >
-                        <img
-                            src="https://i.ibb.co/7pw2wXF/CATS-weblogo.png"
-                            width="50"
-                            height="58"
+                        <Image
+                            src="/img/cats-logo.png"
+                            width={50}
+                            height={58}
                             alt="Clan logo of CATS"
-                        ></img>
+                        />
                     </a>
                     <GlitchHeader
                         className={styles.title}
@@ -51,13 +58,24 @@ export default function Home() {
                 <div className={styles["members-video-wrapper"]}>
                     <video
                         className={styles["members-video"]}
-                        src="/img/cats-lanka-short.webm"
                         width="756"
                         height="371"
                         autoPlay={true}
                         loop={true}
                         muted={true}
-                    />
+                    >
+                        <source
+                            src="/video/cats-lanka-short.webm"
+                            type="video/webm"
+                        />
+                        <source
+                            src="/video/cats-lanka-short.mp4"
+                            type="video/mpeg"
+                        />
+                        {
+                            "This browser does not support the HTML5 video element."
+                        }
+                    </video>
                 </div>
                 <Countdown futureDate={"2021/06/11 17:00"} />
             </section>

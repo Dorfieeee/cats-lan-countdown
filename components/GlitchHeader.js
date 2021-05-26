@@ -120,11 +120,13 @@ export function GlitchLetter({ children, audioSrc, muted }) {
 }
 
 export function Word({ children, className, muted }) {
+    const audioNums = children.split("").map((letter = "") => letter.charCodeAt(0) % 7 || 1);
+    let count = 0;
+
     return (
         <div className={className}>
             {children.split("").map((char, i, word) => {
-                let audioNum = Math.floor(Math.random() * 7 + 1);
-                let audioSrc = `/audio/glitch-noise-${audioNum}.wav`;
+                let audioSrc = `/audio/glitch-noise-${audioNums[count++]}.mp3`;
                 return (
                     <GlitchLetter
                         key={word.join("") + i}

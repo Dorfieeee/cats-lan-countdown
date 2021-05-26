@@ -1,13 +1,13 @@
 @font-face {
-  font-family: HACKED;
-  src: url("../fonts/Hacked-KerX.ttf") format('truetype');
+  font-family: Hacked;
+  src: url("/fonts/Hacked/Hacked-KerX.ttf") format('truetype');
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: HACKED, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Hacked, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: black;
   color: white;
