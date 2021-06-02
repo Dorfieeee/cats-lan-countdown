@@ -1,12 +1,20 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { GlitchHeader } from "../components/GlitchHeader";
+import Carousel from "../components/carousel-static";
 import { Countdown } from "../components/Countdown";
 import { useState } from "react";
+import { useGooglesheetFetch } from "../hooks/customHooks";
 import Image from "next/image";
+
+const sheetURL =
+    "https://docs.google.com/spreadsheets/d/e" +
+    "/2PACX-1vTwVnwz39nfntGhJ5QNGI6uge6Shb5LhHuLwIrNUSOycPYYfkhd_5yoOpLrDAq6IP1pHRppgMY_z5T5" +
+    "/pub?gid=672451712&single=true&output=csv";
 
 export default function Home() {
     const [muted, setMuted] = useState(true);
+    const members = useGooglesheetFetch(sheetURL);
 
     return (
         <div className={styles.container}>
@@ -38,6 +46,7 @@ export default function Home() {
                         className={styles.logo}
                         href="https://csb-9mk2e.netlify.app/"
                         target="_blank"
+                        rel="noreferrer"
                     >
                         <Image
                             src="/img/cats-logo.png"
@@ -80,12 +89,14 @@ export default function Home() {
                 <Countdown futureDate={"2021/06/11 17:00"} />
             </section>
 
+            <section className={styles["main-section"]}>
+                <h2>Participants</h2>
+                <Carousel items={members} />
+            </section>
+
             {/* <main className="main-container">
                 <section className="main-section">
                     <h2>Timeline</h2>
-                </section>
-                <section className="main-section">
-                    <h2>Participants</h2>
                 </section>
                 <section className="main-section">
                     <h2>Map</h2>
