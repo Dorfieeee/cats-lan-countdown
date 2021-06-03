@@ -182,6 +182,7 @@ const CarouselItem = ({ slideDuration, ...props }) => {
                         clip-path: polygon(0% 0%,60% 0%,90% 100%,15% 100%);
                         padding: 0rem 35% 0rem 10%;
                         background: deeppink;
+                        will-change: transform, opacity;
                         transform: translate(0%, -50%);
                     }
 
@@ -201,6 +202,7 @@ const CarouselItem = ({ slideDuration, ...props }) => {
                     .item-wrapper.active.left,
                     .item-wrapper.next.left {
                         display: flex;
+                        will-change: translate;
                         animation-duration: ${slideDuration}s;
                         animation-delay: 0s;
                         animation-direction: normal;
@@ -342,7 +344,6 @@ const CarouselItem = ({ slideDuration, ...props }) => {
 };
 
 const Carousel = ({ items }) => {
-    console.log(items);
     const slideDuration = 0.8;
     let container = useRef(null),
         nItems = items?.length || 0,
@@ -442,8 +443,6 @@ const Carousel = ({ items }) => {
             deactivateSliding();
         }
     };
-
-    console.log(nItems);
 
     useEffect(() => {
         if (items && nItems > 0) {
@@ -580,7 +579,8 @@ const Carousel = ({ items }) => {
                     border: none;
                     cursor: pointer;
                     color: #fff;
-                    transition: all 0.2s ease;
+                    transition: opacity 0.2s ease, scale 0.2s ease;
+                    will-change: opacity, scale;
                     opacity: 0.5;
                     scale: 0.5;
                 }
